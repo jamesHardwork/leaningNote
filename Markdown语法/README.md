@@ -44,7 +44,7 @@ GOOGLE.COM
 ## 2.5脚注   
 Markdown 脚注的格式如下:   
 以下实例演示了脚注的用法：   
-创建脚注格式类似这样 [^1]。     
+创建脚注格式类似这样[^1]。     
 [^1]：脚注  
 ## 3列表
 ### 3.1Markdown 支持有序列表和无序列表。   
@@ -104,6 +104,106 @@ $(document).ready(function () {
     alert('RUNOOB');
 });
 ```
+## 6.链接   
+链接使用方法如下   
+这是一个链接 [犀思云](https://www.syscloud.com)  
+直接使用链接地址：   
+这是一个链接 <https://www.syscloud.com>   
+高级链接    
+我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：   
+这个链接用 1 作为网址变量 [Google][1]   
+这个链接用 runoob 作为网址变量 [Runoob][runoob]   
+然后在文档的结尾为变量赋值（网址）   
 
+  [1]: http://www.google.com/   
+  [runoob]: http://www.runoob.com/   
 
+## 7.图片
+开头一个感叹号 !  
+接着一个方括号，里面放上图片的替代文字  
+接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。   
+使用实例：  
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
 
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png "RUNOOB")
+
+当然，你也可以像网址那样对图片网址使用变量:  
+这个链接用 1 作为网址变量 [RUNOOB][2].  
+然后在文档的结尾为变量赋值（网址）  
+
+[2]: http://static.runoob.com/images/runoob-logo.png
+
+Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的img标签。
+
+<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+
+## 8.表格
+Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。
+
+语法格式如下：
+
+|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+
+对齐方式
+
+我们可以设置表格的对齐方式：
+
+-: 设置内容和标题栏居右对齐。
+:- 设置内容和标题栏居左对齐。
+:-: 设置内容和标题栏居中对齐。
+实例如下：
+
+| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+
+## 9.高级技巧
+### 9.1支持的 HTML 元素
+不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。
+
+目前支持的 HTML 元素有：\<kbd> \<b> \<i> \<em> \<sup> \<sub> \<br>等 ，如：
+
+使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑  
+<b>111</b>
+<i>111</i>
+<em>111</em>
+<sup>111</sup>
+<sub>111</sub>
+<br>111</br>
+
+### 9.2转义
+Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：
+
+**文本加粗**   
+\*\* 正常显示星号 \*\*  
+
+Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
+
+\\   反斜线   
+\`   反引号   
+\*   星号   
+\_   下划线   
+\{}  花括号   
+\[]  方括号    
+\()  小括号   
+\#   井字号   
+\+   加号   
+\-   减号   
+\.   英文句点   
+\!   感叹号
+
+### 9.3公式
+当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染   
+
+$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
+\frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0 \\
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$
